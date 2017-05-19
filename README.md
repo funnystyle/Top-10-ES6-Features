@@ -1,5 +1,8 @@
 # Top 10 ES6 Features Every Busy JavaScript Developer Must Know
+# 바쁜 자바스크립트 개발자를 위한 필수 ES6 기능 10가지
 https://webapplog.com/es6/
+
+(발번역 : 김동환)
 
 1. Default Parameters in ES6
 2. Template Literals in ES6
@@ -14,7 +17,11 @@ https://webapplog.com/es6/
 
 ## 1. Default Parameters in ES6
 
+## 1. 기본 매개변수
+
 Remember we had to do these statements to define default parameters:
+
+기본 매개변수를 정의할 때 아래와 같은 방법을 써야만 했던 것을 떠올려보자.
   
 ```javascript
 var link = function (height, color, url) {
@@ -26,12 +33,16 @@ var link = function (height, color, url) {
 ```
 They were okay until the value was 0 and because 0 is falsy in JavaScript it would default to the hard-coded value instead of becoming the value itself. Of course, who needs 0 as a value (#sarcasmfont), so we just ignored this flaw and used the logic OR anyway… No more! In ES6, we can put the default values right in the signature of the functions:
 
+이 방법은 값이 0만 아니면 괜찮은 방법이다. 왜냐하면 javascript 에서 0은 false를 의미하기 때문에 값이 0이 들어오면 0이 아니라 하드코딩한 값(오른쪽 값)이 default가 된다. ...(중략)... ES6에서는 함수를 정의할 때 변수 오른쪽에 default value 를 놓을 수 있다.
+
 ```javascript
 var link = function(height = 50, color = 'red', url = 'http://azat.co') {
   ...
 }
 ```
 By the way, this syntax is similar to Ruby!
+
+그런데, 이 문법은 루비랑 비슷하다!
 
 ## 2. Template Literals in ES6
 
